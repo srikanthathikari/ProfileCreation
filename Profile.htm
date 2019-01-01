@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 
 <html>
-
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
 <head>
 
-<link rel="stylesheet" type="text/css" href="Profile.css">
+<link rel="stylesheet" type="text/css" href="cssForProfile.css">
 
 <Title> Srikanth Athikari </Title>
 
@@ -12,9 +14,72 @@
 
 <body>
 
-<h1>  The Truth Will Set You Free </h1> 
+<h1>  
 
-<img src="A:/myProfile/ProfileCreation/9f385384cf86350110d2d0029a0dcc15.jpg" alt="The Truth Will Set You Free" style =" height : 585px; width:1366px">
+        <div  id="mySidenav" class="sidenav">
+                <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
+                <a href="#">HOME</a>
+                <a href="#">PROFILE</a>
+                <a href="#">INTERESTS</a>
+                <a href="#">CONTACT</a>
+              </div>
+              
+<style>
+
+.container {
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color : white;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+  
+  .change .bar2 {opacity: 0;}
+  
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+  </style>
+  </head>
+  <body>
+  
+  <div class="container" onclick="myFunction(this)">
+      
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+  </div>
+  
+  <script>
+  function myFunction(x) {
+    x.classList.toggle("change");
+  }
+
+
+  </script>
+
+<script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>    
+  
+  </h1>
 
 </body>
 
