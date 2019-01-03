@@ -2,85 +2,107 @@
 
 <html>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">  
+      
+        <head>
 
-<link rel="stylesheet" type="text/css" href="cssForProfile.css">
+          <link rel="stylesheet" type="text/css" href="cssForProfile.css">
 
-<Title> Srikanth Athikari </Title>
+          <Title> Srikanth Athikari </Title>
 
-</head>
+          <body>
 
-<body>
-
-<h1>  
-
-        <div  id="mySidenav" class="sidenav">
-                <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
-                <a href="#">HOME</a>
-                <a href="#">PROFILE</a>
-                <a href="#">INTERESTS</a>
-                <a href="#">CONTACT</a>
+              <div class="slideshow-container">
+              
+              <div class="mySlides">
+                <q>You have to grow from the inside out. None can teach you, none can make you spiritual.
+                  There is no other teacher but your own soul.
+                </q>
+                <p class="author">- Swamy Vivekanand</p>
               </div>
               
-<style>
+              <div class="mySlides">
+                <q>We are what our thoughts have made us;so take care of what you think. Words are secondary
+                  THOUGHTS LIVE;they travel far.
 
-.container {
-    display: inline-block;
-    cursor: pointer;
-  }
-  
-  .bar1, .bar2, .bar3 {
-    width: 35px;
-    height: 5px;
-    background-color : white;
-    margin: 6px 0;
-    transition: 0.4s;
-  }
-  
-  .change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-    transform: rotate(-45deg) translate(-9px, 6px);
-  }
-  
-  .change .bar2 {opacity: 0;}
-  
-  .change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px);
-    transform: rotate(45deg) translate(-8px, -8px);
-  }
-  </style>
-  </head>
-  <body>
-  
-  <div class="container" onclick="myFunction(this)">
-      
-    <div class="bar1"></div>
-    <div class="bar2"></div>
-    <div class="bar3"></div>
-  </div>
-  
-  <script>
-  function myFunction(x) {
-    x.classList.toggle("change");
-  }
+                </q>
+                <p class="author">- Swamy Vivekanand</p>
+              </div>
+              
+              <div class="mySlides">
+                <q>"Strength is life, Weakness is Death" </q>
+                <p class="author">- Swamy Vivekanand</p>
+              </div>
+              
+              <a class="prev" onclick="plusSlides(-1)">❮</a>
+              <a class="next" onclick="plusSlides(1)">❯</a>
+              
+              </div>
+              
+              <div class="dot-container">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+              </div>
+              
+              <script>
+              var slideIndex = 1;
+              showSlides(slideIndex);
+              
+              function plusSlides(n) {
+                showSlides(slideIndex += n);
+              }
+              
+              function currentSlide(n) {
+                showSlides(slideIndex = n);
+              }
+              
+              function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {slideIndex = 1}    
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";  
+                dots[slideIndex-1].className += " active";
+              }
+              </script>
+              
+              </body>
+              
+              
 
+        </head>     
 
-  </script>
+    <body>
 
-<script>
-        function openNav() {
-          document.getElementById("mySidenav").style.width = "250px";
-        }
-        
-        function closeNav() {
-          document.getElementById("mySidenav").style.width = "0";
-        }
-    </script>    
-  
-  </h1>
-
-</body>
-
-</html>
+          <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">HOME</a>
+            <a href="#">PROFILE</a>
+            <a href="#">INTERESTS</a>
+            <a href="#">CONTACT</a>
+          </div>
+          
+         
+          <span style="color :white;font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+          
+          <script>
+          function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+          }
+          
+          function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+          }
+          </script>
+             
+          </body>
+          </html> 
+          
